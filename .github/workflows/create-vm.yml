@@ -2,9 +2,11 @@ name: Oracle Auto Create
 
 on:
 
-  schedule:
-    - cron: '0 * * * *'
-
+#  schedule:
+#   - cron: '0 * * * *'
+  repository_dispatch:
+    types: [trigger-screener]
+    
   workflow_dispatch:
 
 permissions:
